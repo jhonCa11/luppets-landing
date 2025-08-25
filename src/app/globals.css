@@ -1,34 +1,97 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-/* Puedes definir estilos globales */
-@theme {
-  --font-sans: 'Poppins', sans-serif;
-  --color-primary: #f97316; /* naranja cálido */
-  --color-secondary: #8C5E3C; /* café */
-  --color-bg: #FFF5E4; /* beige */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #f97316;
+  --color-secondary: #8C5E3C;
+  --color-bg: #FFF5E4;
+  --color-dark: #171717;
+  --color-light: #ffffff;
+  --color-heading: #251c16;
+  
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--spacing-2xl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--spacing-xl);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--spacing-lg);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h6 {
+  font-size: var(--spacing-md);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+[class*="bg-"] h1,
+[class*="bg-"] h2,
+[class*="bg-"] h3,
+[class*="bg-"] h4,
+[class*="bg-"] h5,
+[class*="bg-"] h6 {
+  color: var(--color-heading) !important;
+}
+
+[class*="text-"] h1,
+[class*="text-"] h2,
+[class*="text-"] h3,
+[class*="text-"] h4,
+[class*="text-"] h5,
+[class*="text-"] h6 {
+  color: var(--color-heading) !important;
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6,
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-orange-50 h1, .bg-orange-50 h2, .bg-orange-50 h3, .bg-orange-50 h4, .bg-orange-50 h5, .bg-orange-50 h6,
+.text-center h1, .text-center h2, .text-center h3, .text-center h4, .text-center h5, .text-center h6 {
+  color: var(--color-heading) !important;
 }
