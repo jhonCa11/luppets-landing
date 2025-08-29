@@ -6,6 +6,7 @@ import Testimonials from "./components/sections/Testimonials";
 import HowItWorks from "./components/sections/HowItWorks";
 import Security from "./components/sections/Security";
 import CTAFinal from "./components/sections/CTAFinal";
+import Footer from "./components/sections/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HowItWorks />
       <Security />
       <CTAFinal />
+      <Footer />
     </main>
   );
 }
