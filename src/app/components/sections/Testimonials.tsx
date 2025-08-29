@@ -31,8 +31,8 @@ export default function Testimonials() {
             </div>
             <div className="p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-lg w-full border border-orange-100">
               <p className="text-sm sm:text-base text-gray-700 italic mb-4 leading-relaxed">
-                "Desde que uso Luppets me siento segura de que Kira siempre recibe
-                el mejor cuidado."
+                &ldquo;Desde que uso Luppets me siento segura de que Kira siempre recibe
+                el mejor cuidado.&rdquo;
               </p>
               <span className="font-bold text-gray-800 text-sm sm:text-base">Karen – Bogotá, Colombia</span>
             </div>
@@ -59,8 +59,8 @@ export default function Testimonials() {
             </div>
             <div className="p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl shadow-lg w-full border border-red-100">
               <p className="text-sm sm:text-base text-gray-700 italic mb-4 leading-relaxed">
-                "Los recordatorios me salvaron de olvidar las vacunas de Rosky y Molly.
-                100% recomendado."
+                &ldquo;Los recordatorios me salvaron de olvidar las vacunas de Rosky y Molly.
+                100% recomendado.&rdquo;
               </p>
               <span className="font-bold text-gray-800 text-sm sm:text-base">Estefania – Durango, México</span>
             </div>
@@ -87,7 +87,7 @@ export default function Testimonials() {
             </div>
             <div className="p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg w-full border border-amber-100">
               <p className="text-sm sm:text-base text-gray-700 italic mb-4 leading-relaxed">
-                "El mejor apoyo para quienes amamos a nuestros perros y gatos."
+                &ldquo;El mejor apoyo para quienes amamos a nuestros perros y gatos.&rdquo;
               </p>
               <span className="font-bold text-gray-800 text-sm sm:text-base">Greisy – Lima, Perú</span>
             </div>

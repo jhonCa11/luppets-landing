@@ -1,4 +1,3 @@
-import Button from "../ui/Button";
 import { Bell, Lightbulb, Target } from 'lucide-react';
 
 export default function ProblemSolution() {

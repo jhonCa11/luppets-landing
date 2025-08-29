@@ -1,4 +1,3 @@
-import Button from "../ui/Button";
 import { Download, Smartphone, Star, ArrowRight } from 'lucide-react';
 
 export default function CTAFinal() {

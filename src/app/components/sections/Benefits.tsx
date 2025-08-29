@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "../ui/Button";
 import { Bell, Lightbulb, Shield, Heart, Users } from 'lucide-react';
 
 export default function Benefits() {

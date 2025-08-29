@@ -14,7 +14,7 @@ const SCROLL_OFFSET = 100; // Offset para detección de sección activa
 type SectionId = typeof NAV_SECTIONS[number];
 
 // Función de throttling personalizada (sin dependencias externas)
-const throttle = <T extends (...args: any[]) => any>(
+const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   delay: number
 ): ((...args: Parameters<T>) => void) => {
