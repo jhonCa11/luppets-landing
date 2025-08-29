@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md sticky top-0 z-50">
       <Link href="#hero" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
         <Image 
-          src="/logo.png" 
+          src="/logo.webp" 
           alt="Luppets Logo" 
           width={40} 
           height={40}

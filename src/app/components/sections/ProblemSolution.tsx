@@ -1,4 +1,5 @@
 import Button from "../ui/Button";
+import { Bell, Lightbulb, Target } from 'lucide-react';
 
 export default function ProblemSolution() {
   return (
@@ -13,20 +14,31 @@ export default function ProblemSolution() {
           para que nunca falte nada.
         </p>
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="p-6 bg-orange-50 rounded-xl shadow-sm">
-            <h3 className="mb-2">Recordatorios</h3>
+          <div className="p-6 bg-orange-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="flex justify-center mb-4">
+              <Bell className="w-12 h-12 text-orange-500" />
+            </div>
+            <h3 className="mb-2 font-semibold text-gray-800">Recordatorios</h3>
             <p className="text-gray-600">Para vacunas y cuidados</p>
           </div>
-          <div className="p-6 bg-orange-50 rounded-xl shadow-sm">
-            <h3 className="mb-2">Consejos expertos</h3>
+          <div className="p-6 bg-orange-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="flex justify-center mb-4">
+              <Lightbulb className="w-12 h-12 text-orange-500" />
+            </div>
+            <h3 className="mb-2 font-semibold text-gray-800">Consejos expertos</h3>
             <p className="text-gray-600">Alimentación, ejercicio e higiene</p>
           </div>
-          <div className="p-6 bg-orange-50 rounded-xl shadow-sm">
-            <h3 className="mb-2">Recomendaciones</h3>
+          <div className="p-6 bg-orange-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="flex justify-center mb-4">
+              <Target className="w-12 h-12 text-orange-500" />
+            </div>
+            <h3 className="mb-2 font-semibold text-gray-800">Recomendaciones</h3>
             <p className="text-gray-600">Adaptadas a su raza, tamaño y edad</p>
           </div>
         </div>
-        <Button variant="secondary">Quiero dejar de preocuparme</Button>
+        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300 shadow-lg hover:shadow-xl">
+          Quiero dejar de preocuparme
+        </button>
       </div>
     </section>
   );

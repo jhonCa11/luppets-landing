@@ -71,27 +71,19 @@ h6 {
   line-height: 1.3;
 }
 
-[class*="bg-"] h1,
-[class*="bg-"] h2,
-[class*="bg-"] h3,
-[class*="bg-"] h4,
-[class*="bg-"] h5,
-[class*="bg-"] h6 {
-  color: var(--color-heading) !important;
+/* Solo aplicar colores por defecto cuando no hay clases específicas de color */
+h1:not([class*="text-"]):not([class*="bg-"]),
+h2:not([class*="text-"]):not([class*="bg-"]),
+h3:not([class*="text-"]):not([class*="bg-"]),
+h4:not([class*="text-"]):not([class*="bg-"]),
+h5:not([class*="text-"]):not([class*="bg-"]),
+h6:not([class*="text-"]):not([class*="bg-"]) {
+  color: var(--color-heading);
 }
 
-[class*="text-"] h1,
-[class*="text-"] h2,
-[class*="text-"] h3,
-[class*="text-"] h4,
-[class*="text-"] h5,
-[class*="text-"] h6 {
-  color: var(--color-heading) !important;
-}
-
-section h1, section h2, section h3, section h4, section h5, section h6,
-.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
-.bg-orange-50 h1, .bg-orange-50 h2, .bg-orange-50 h3, .bg-orange-50 h4, .bg-orange-50 h5, .bg-orange-50 h6,
-.text-center h1, .text-center h2, .text-center h3, .text-center h4, .text-center h5, .text-center h6 {
-  color: var(--color-heading) !important;
+/* Permitir que las secciones con fondos específicos mantengan sus colores */
+.bg-orange-500 h1, .bg-orange-500 h2, .bg-orange-500 h3, .bg-orange-500 h4, .bg-orange-500 h5, .bg-orange-500 h6,
+.bg-orange-600 h1, .bg-orange-600 h2, .bg-orange-600 h3, .bg-orange-600 h4, .bg-orange-600 h5, .bg-orange-600 h6,
+.bg-gray-900 h1, .bg-gray-900 h2, .bg-gray-900 h3, .bg-gray-900 h4, .bg-gray-900 h5, .bg-gray-900 h6 {
+  color: inherit;
 }
