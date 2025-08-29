@@ -31,7 +31,7 @@ export default function Testimonials() {
             </div>
             <div className="p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-lg w-full border border-orange-100">
               <p className="text-sm sm:text-base text-gray-700 italic mb-4 leading-relaxed">
-                "Desde que uso Luppets me siento seguro de que Kira siempre recibe
+                "Desde que uso Luppets me siento segura de que Kira siempre recibe
                 el mejor cuidado."
               </p>
               <span className="font-bold text-gray-800 text-sm sm:text-base">Karen – Bogotá, Colombia</span>
