@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
 import Script from "next/script";
+
+import { siteUrl } from "@/sanity/env";
+
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,17 +13,22 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Luppets",
-  description: "La app que te ayuda a cuidar a tu mascota con recordatorios personalizados, consejos y comunidad.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Luppets",
+    template: "%s | Luppets",
+  },
+  description:
+    "La app que te ayuda a cuidar a tu mascota con recordatorios personalizados, consejos y comunidad.",
   keywords: ["mascotas", "cuidado", "salud animal", "Luppets"],
   openGraph: {
     title: "Luppets - Cuida y Protege a tu Mascota",
     description: "Más salud, más vida, más amor para tu mascota 🐾",
-    url: "https://luppets.vercel.app",
+    url: siteUrl,
     siteName: "Luppets",
     images: [
       {
-        url: "/og-image.png", 
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Luppets - app de cuidado de mascotas",

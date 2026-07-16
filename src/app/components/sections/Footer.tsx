@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Heart, Youtube } from 'lucide-react';
 
 export default function Footer() {
@@ -68,10 +69,11 @@ export default function Footer() {
           <div>
             <div className="text-lg font-semibold mb-3 text-white border-b-2 border-orange-500 pb-1">Enlaces</div>
             <ul className="space-y-2 text-sm">
-              <li><a href="#hero" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Inicio</a></li>
-              <li><a href="#how" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Cómo funciona</a></li>
-              <li><a href="#benefits" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Beneficios</a></li>
-              <li><a href="#cta" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Descargar</a></li>
+              <li><Link href="/" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Inicio</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Blog</Link></li>
+              <li><Link href="/#how" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Cómo funciona</Link></li>
+              <li><Link href="/#benefits" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Beneficios</Link></li>
+              <li><Link href="/#cta" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Descargar</Link></li>
             </ul>
           </div>
 
