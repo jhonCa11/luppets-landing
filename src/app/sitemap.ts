@@ -1,44 +1,35 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://luppets.com'
-  
+import { siteUrl } from "@/sanity/env";
+import { sanityFetch } from "@/sanity/fetch";
+import { POST_SLUGS_QUERY } from "@/sanity/queries";
+import type { SitemapPost } from "@/sanity/types";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await sanityFetch<SitemapPost[]>({
+    query: POST_SLUGS_QUERY,
+    revalidate: 60,
+    fallback: [],
+  });
+
   return [
     {
-      url: baseUrl,
+      url: siteUrl,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/#problema`,
+      url: `${siteUrl}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...posts.map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.updatedAt ?? post.publishedAt),
+      changeFrequency: "monthly" as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#beneficios`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#testimonios`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/#como-funciona`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#seguridad`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-  ]
+    })),
+  ];
 }
