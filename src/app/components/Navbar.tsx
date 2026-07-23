@@ -53,6 +53,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const isBlog = pathname?.startsWith("/blog") ?? false;
+  const isFundacion = pathname === "/fundacion";
   const [activeSection, setActiveSection] = useState<SectionId>("hero");
 
   const scrollToSection = useCallback((sectionId: SectionId) => {
@@ -131,15 +132,15 @@ export default function Navbar() {
     }`;
   }, [activeSection, isHome]);
 
-  const blogLinkClasses = useMemo(() => {
+  const getStaticLinkClasses = useCallback((isActive: boolean) => {
     const baseClasses =
       "hover:text-orange-500 transition-all duration-300 cursor-pointer px-3 py-1.5 rounded-lg";
     const activeClasses =
       "text-orange-500 bg-orange-50 border-b-2 border-orange-500";
     const inactiveClasses = "hover:bg-gray-50";
 
-    return `${baseClasses} ${isBlog ? activeClasses : inactiveClasses}`;
-  }, [isBlog]);
+    return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+  }, []);
 
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between bg-white px-6 py-2 shadow-md">
@@ -170,8 +171,16 @@ export default function Navbar() {
           </li>
         ))}
         <li>
-          <Link href="/blog" className={blogLinkClasses}>
+          <Link href="/blog" className={getStaticLinkClasses(isBlog)}>
             Blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/fundacion"
+            className={getStaticLinkClasses(isFundacion)}
+          >
+            Nosotros
           </Link>
         </li>
       </ul>
