@@ -9,6 +9,9 @@ export default function Footer() {
           {/* Logo y descripción */}
           <div className="lg:col-span-1">
             <div className="text-xl font-bold mb-2 text-orange-500">Luppets</div>
+            <p className="text-sm text-gray-300 mb-1">
+              Iniciativa de la Fundación Luppets
+            </p>
             <p className="text-sm text-gray-300 mb-3">
               La app que cuida la salud de tu mascota con recordatorios inteligentes y seguimiento veterinario.
             </p>
@@ -70,6 +73,7 @@ export default function Footer() {
             <div className="text-lg font-semibold mb-3 text-white border-b-2 border-orange-500 pb-1">Enlaces</div>
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Inicio</Link></li>
+              <li><Link href="/fundacion" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Nosotros</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Blog</Link></li>
               <li><Link href="/#how" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Cómo funciona</Link></li>
               <li><Link href="/#benefits" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Beneficios</Link></li>
@@ -109,9 +113,14 @@ export default function Footer() {
         </div>
 
         {/* Línea de copyright */}
-        <div className="border-t border-gray-700 pt-4 text-center">
+        <div className="border-t border-gray-700 pt-4 text-center space-y-1">
+          <p className="text-sm font-medium text-gray-300">Fundación Luppets</p>
+          <p className="text-sm text-gray-400">Organización sin ánimo de lucro</p>
           <p className="text-sm text-gray-400">
-            © 2025 Luppets. Hecho con <Heart className="inline w-4 h-4 text-red-500" /> para mascotas felices.
+            © {new Date().getFullYear()} Fundación Luppets. Todos los derechos reservados.
+          </p>
+          <p className="text-xs text-gray-500 pt-1">
+            Hecho con <Heart className="inline w-3.5 h-3.5 text-red-500" /> para mascotas felices.
           </p>
         </div>
       </div>
