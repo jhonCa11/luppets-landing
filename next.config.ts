@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         destination: "/fundacion",
         permanent: true,
       },
+      {
+        source: "/privacy",
+        destination: "/privacidad",
+        permanent: true,
+      },
     ];
   },
   images: {

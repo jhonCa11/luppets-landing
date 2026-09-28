@@ -52,7 +52,7 @@ export default function Security() {
         {/* Enlaces de confianza */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/privacy" className="text-orange-500 hover:text-orange-600 underline font-medium transition-colors duration-300">
+            <a href="/privacidad" className="text-orange-500 hover:text-orange-600 underline font-medium transition-colors duration-300">
               Política de privacidad
             </a>
             <span className="text-gray-400">•</span>
